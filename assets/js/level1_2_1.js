@@ -10,42 +10,42 @@ let edelMetallPreise = [
     { name: "Osmium", preiseGramEuro: 11.54, veraenderung: "0.00%" }
 ];
 
-let array = []
-edelMetallPreise.forEach((metalle) => {
-    array.push(metalle.name)
-    console.log(metalle.name);
-})
-console.log(array)
+// let array = []
+// edelMetallPreise.forEach((metalle) => {
+//     array.push(metalle.name)
+//     console.log(metalle.name);
+// })
+// console.log(array)
 
 
 
-let arrayMap = edelMetallPreise.map((metalle) => metalle.name)
-console.log(arrayMap);
+let mapName = edelMetallPreise.map((metalle) => metalle.name)
+console.log(mapName);
 
 
 
 
-let arrayPreisGramm = []
-edelMetallPreise.forEach((metalle) => {
-    arrayPreisGramm.push(metalle.preiseGramEuro)
-})
-console.log(arrayPreisGramm)
+// let arrayPreisGramm = []
+// edelMetallPreise.forEach((metalle) => {
+//     arrayPreisGramm.push(metalle.preiseGramEuro)
+// })
+// console.log(arrayPreisGramm)
 
 
 
-edelMetallPreise.map((metalle) => console.log(metalle.preiseGramEuro))
+let mapPrice = edelMetallPreise.map((metalle) => metalle.preiseGramEuro)
+console.log(mapPrice);
+
+
+// let arrayVeraenderung = []
+// edelMetallPreise.forEach((metalle) => {
+//     arrayVeraenderung.push(metalle.veraenderung)
+// })
+// console.log(arrayVeraenderung)
 
 
 
-let arrayVeraenderung = []
-edelMetallPreise.forEach((metalle) => {
-    arrayVeraenderung.push(metalle.veraenderung)
-})
-console.log(arrayVeraenderung)
-
-
-
-edelMetallPreise.map((metalle) => console.log(metalle.veraenderung))
+let mapChanges = edelMetallPreise.map((metalle) => metalle.veraenderung)
 
 
 
@@ -81,12 +81,8 @@ row_1.appendChild(heading_3);
 tbody.appendChild(row_1);
 
 
-let row_2 = document.createElement('td')
-
-// let test = document.createElement("p")
-// test.innerHTML = arrayMap
-row_2.innerHTML = arrayMap
-document.body.appendChild(row_2)
-
-
-
+for (let i = 0; i < mapName.length; i++){
+    let rowStart = document.createElement('tr')
+    rowStart.innerHTML = `<th>${mapName[i]}</th> <th>${mapPrice[i]}</th> <th>${mapChanges[i]}</th>`
+    tbody.appendChild(rowStart)
+}
