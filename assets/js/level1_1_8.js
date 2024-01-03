@@ -23,12 +23,16 @@ let studentData = [
     }
 ];
 
-
+console.log(studentData);
+let array = []
 
 studentData.forEach((data) => {
     console.log(data.name);
     console.log(data.coop);
-    console.log(data.address.city);
     console.log(data.emails);
+    array.push(data.address.city);
+    
 })
+console.log(array);
+
 

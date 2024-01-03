@@ -33,7 +33,7 @@ console.log(myMusic);
 
 myMusic.forEach((information) => {
     const containerDiv = document.createElement("div");
-
+    
     const artistName = document.createElement("p")
     artistName.innerHTML = information.artist
     document.body.appendChild(artistName)
